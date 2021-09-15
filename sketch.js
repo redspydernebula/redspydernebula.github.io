@@ -1,12 +1,16 @@
 let a;
 function setup() {
   //createCanvas(400, 400);
-  noCanvas();
+  createCanvas(1,1);
   a = 0;
 }
 
 function draw() {
-  background(220);
+  background(0,0,0,0);
+  for(let i = 0; i < 22; i++){
+    let a = sin(3.2*(((i*25 + frameCount)%255)/255));
+    document.getElementById("t" + i).style.color="rgba(" + 250*a + ",250,150," + a + ")";
+  }
 }
 
 function myFunction() {
@@ -24,4 +28,4 @@ function myFunction() {
   a++;
 }
 
-//function getGoldfishResponse
+
