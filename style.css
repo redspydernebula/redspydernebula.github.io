@@ -30,17 +30,17 @@ h2{
   margin-left: 60px;
 }
 
-/*div{
-  
-}*/
-
 html{
-  
+  background-image: url("Background.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100vw 100vh;
   scroll-behavior: smooth;
 }
 
 #introSection{
   height: 300px;
+  
   background-color: rgb(27, 44, 71);
 }
 
@@ -53,4 +53,20 @@ html{
 #t0,#t1,#t2,#t3,#t4,#t5,#t6,#t7,#t8,#t9,#t10,#t11,#t12,#t13,#t14,#t15,#t16,#t17,#t18,#t19,#t20,#t21{
   display:inline;
 }
+
+#centerSection{
+  position: absolute;
+  width: calc(70vw);
+  left: calc(15vw);
+  z-index: 2;
+}
+
+#sideSection{
+  position:absolute;
+  z-index: 1;
+  width:calc(100vw); 
+  height:calc(100vh);
+}
+
+
 
