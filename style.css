@@ -1,6 +1,6 @@
 html, body {
-  margin: 0;
-  padding: 0;
+  margin: 20px;
+  padding: 20px;
   font-family: 'Comic Neue', sans-serif;
 }
 canvas {
@@ -10,7 +10,8 @@ canvas {
 
 p {
   color:rgb(250,250,250);
-  margin-left: 30px;
+  margin-left: 60px;
+  margin-right: 60px;
 }
 
 a{
@@ -27,7 +28,8 @@ h1{
 
 h2{
   color:rgb(250,250,250);
-  margin-left: 60px;
+  margin-left: 30px;
+  margin-right: 60px;
 }
 
 html{
@@ -39,16 +41,33 @@ html{
 }
 
 #introSection{
-  height: 300px;
-  
-  background-color: rgb(27, 44, 71);
+  height: 380px;
+  background-color: rgb(27, 44, 71,0.5);
 }
 
 #section2{
-  height: 3500px;
-  background-color: rgb(30,30,30);
+  height: 1000px;
   
 }
+
+#section3{
+  height: 200px;
+  background-color: rgb(30,30,30,0.5);
+  
+}
+
+#bioSection{
+  height: 2500px;
+  background-color: rgba(30, 30, 30, 0.5);
+  
+}
+
+#gamesSection{
+  height: 2000px;
+  background-color: rgba(30, 30, 30, 0.5);
+  
+}
+
 
 #t0,#t1,#t2,#t3,#t4,#t5,#t6,#t7,#t8,#t9,#t10,#t11,#t12,#t13,#t14,#t15,#t16,#t17,#t18,#t19,#t20,#t21,#t22,#t23{
   display:inline;
