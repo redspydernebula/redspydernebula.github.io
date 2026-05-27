@@ -5,6 +5,58 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
     <meta charset = "UTF-8">
     <title>Piece 2</title>
+
+    <style>
+        
+        .table-container {
+            width: 100%;
+            max-width: 1000px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .course-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 14px;
+        }
+        .course-table th {
+            background-color: #583179;
+            color: #ffffff;
+            font-weight: 600;
+            padding: 14px 16px;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 0.5px;
+        }
+        .course-table td {
+            padding: 12px 16px;
+            border-bottom: 1px solid #e9ecef;
+            color: #524957;
+        }
+        .course-table tbody tr:nth-child(even) {
+            background-color: #f2f6fa;
+        }
+        .course-table tbody tr:hover {
+            background-color: #e9f1f7;
+        }
+        .course-code {
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+            font-weight: 600;
+            color: #5c1f78;
+        }
+        .department-badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 500;
+            background-color: #e9ecef;
+            color: #504957;
+        }
+    </style>
     
     
   </head>
@@ -18,18 +70,145 @@
         
         <body>
             <h2>Bio:</h2>
-            <p>Hi! My name is Andrew Boyacigiller. I am currently attending Brown University where I am studying Computer Science and Music.
-                My current plans are to focus on computer vision and backend programming, while also composing and singing on the side.
-                I also have an interest in rocketry, particularly regarding orbital mechanics and the material physics behind aerospace engineering.
+            <p> Hi! My name is Andrew Boyacigiller. I am currently attending Brown University where I am studying Computer Science and Music.
+                I have ran through a gamut of projects and disciplines in my time here, focusing primarily on computer vision, graphics, and computer security. I am particularly interested in the intersection of art and technology. In this vein, you can find my work in p5js from my earlier years, but I have also worked with interactive sculpture,  I have found myself particularly enjoying seminar style courses and those where the projects center around implementing a paper or series of papers.
+
+                In terms of music, I have been playing piano on and off for over a decade and have been composing for about 5 years. I have an interest in electronic music, and I have been using Ableton Live to produce music for the past 7 years.
+
+                Currently, I am studying vocal performance under Tyler Cesario, under which I am currently studying French impressionist music and classic opera repertoire. I am performing and regularly soloing in the as a Tenor Voice Scholar at Trinity Church, as well as performing in Providence and the wider New England area. Originally from just outside of Annapolis MD, I has moved and performed all over the U.S. from Texas to Georgia, and now Rhode Island. 
+
+                Outside of academic work, I enjoy composing, coding interactive art using p5.js, and drafting technical drawings. In my free time, I enjoy sailing with my dad, reading or watching old-school science fiction, and attempting to cook passable meals with an increasingly dwindling number of ingredients.
+
+                I also have an interest in rocketry, relativistic light transport, vocal acoustics, and the mathematics found in just intonation.
             </p>
 
             <h2>Classes</h2>
-            <p>I'm currently taking the hardest CS class available to me, CSCI0190, which focuses on functional programming in Racket and Pyret. 
-                The class focused heavily on testing and code coverage, as well as general style, which I feel really helped me design more effective solutions to problems.
-            </p>
+            <div class="table-container">
+                <table class="course-table">
+                    <thead>
+                        <tr>
+                            <th>Course Code</th>
+                            <th>Course Name</th>
+                            <th>Department</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="course-code">CSCI2240</td>
+                            <td>Advanced Computer Graphics</td>
+                            <td><span class="department-badge">Computer Science</span></td>
+                        </tr>
+                        <tr>
+                            <td class="course-code">CSCI1710</td>
+                            <td>Logic for Systems</td>
+                            <td><span class="department-badge">Computer Science</span></td>
+                        </tr>
+                        <tr>
+                            <td class="course-code">MUSC1240N</td>
+                            <td>Analog Practice</td>
+                            <td><span class="department-badge">Music</span></td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="course-code">CSCI1290</td>
+                            <td>Computational Photography</td>
+                            <td><span class="department-badge">Computer Science</span></td>
+                        </tr>
+                        <tr>
+                            <td class="course-code">CSCI1650</td>
+                            <td>Software Security and Exploitation</td>
+                            <td><span class="department-badge">Computer Science</span></td>
+                        </tr>
+                        <tr>
+                            <td class="course-code">CSCI2951U</td>
+                            <td>Topics in Software Security</td>
+                            <td><span class="department-badge">Computer Science</span></td>
+                        </tr>
+                        <tr>
+                            <td class="course-code">CSCI1230/4</td>
+                            <td>Computer Graphics + Lab</td>
+                            <td><span class="department-badge">Computer Science</span></td>
+                        </tr>
+                        <tr>
+                            <td class="course-code">CSCI1430</td>
+                            <td>Computer Vision</td>
+                            <td><span class="department-badge">Computer Science</span></td>
+                        </tr>
+                        <tr>
+                            <td class="course-code">MUSC0200</td>
+                            <td>Computers and Music</td>
+                            <td><span class="department-badge">Music</span></td>
+                        </tr>
+                        <tr>
+                            <td class="course-code">CSCI0300</td>
+                            <td>Fundamentals of Computer Systems</td>
+                            <td><span class="department-badge">Computer Science</span></td>
+                        </tr>
+                        <tr>
+                            <td class="course-code">MUSC1100</td>
+                            <td>Introduction to Composition</td>
+                            <td><span class="department-badge">Music</span></td>
+                        </tr>
+                        <tr>
+                            <td class="course-code">CSCI0320</td>
+                            <td>Introduction to Software Engineering</td>
+                            <td><span class="department-badge">Computer Science</span></td>
+                        </tr>
+                        <tr>
+                            <td class="course-code">MUSC1975</td>
+                            <td>Jazz &amp; The Explosion of Genre</td>
+                            <td><span class="department-badge">Music</span></td>
+                        </tr>
+                        <tr>
+                            <td class="course-code">MUSC0800</td>
+                            <td>Applied Music Program - Voice</td>
+                            <td><span class="department-badge">Music</span></td>
+                        </tr>
+                        <tr>
+                            <td class="course-code">MUSC0600</td>
+                            <td>Chorus</td>
+                            <td><span class="department-badge">Music</span></td>
+                        </tr>
+                        <tr>
+                            <td class="course-code">CLAS1210</td>
+                            <td>Mediterranean Culture Wars: Archaic Greek History, c. 1200 to 479 BC</td>
+                            <td><span class="department-badge">Classics</span></td>
+                        </tr>
+                        <tr>
+                            <td class="course-code">VISA0100</td>
+                            <td>Studio Foundation</td>
+                            <td><span class="department-badge">Visual Art</span></td>
+                        </tr>
+                        <tr>
+                            <td class="course-code">MUSC0550</td>
+                            <td>Theory of Tonal Music I</td>
+                            <td><span class="department-badge">Music</span></td>
+                        </tr>
+                        <tr>
+                            <td class="course-code">CSCI0190</td>
+                            <td>Accelerated Introduction to Computer Science</td>
+                            <td><span class="department-badge">Computer Science</span></td>
+                        </tr>
+                        <tr>
+                            <td class="course-code">MATH0200</td>
+                            <td>Multivariable Calculus (Physics/Engineering)</td>
+                            <td><span class="department-badge">Mathematics</span></td>
+                        </tr>
+                        <tr>
+                            <td class="course-code">CSCI0220</td>
+                            <td>Introduction to Discrete Structures and Probability</td>
+                            <td><span class="department-badge">Computer Science</span></td>
+                        </tr>
+                        <tr>
+                            <td class="course-code">MATH0520</td>
+                            <td>Linear Algebra</td>
+                            <td><span class="department-badge">Mathematics</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
-            <p>I'm planning on taking CSCI0300 and CSCI1430, focusing on x86/C and computer vision respectively. 
-                After that in my sophomore year, I will be taking a deep learning course as well as a few web development and theory of computation courses.
+            <p> I'm in my last semester at Brown at the moment, and I am looking forward to graduating and pursuing a career in software engineering, with a focus on graphics or security. I am also interested in pursuing music composition and vocal performance in some capacity, whether that be through a more traditional route of conservatory or through more experimental avenues. I am also interested in exploring the intersection of art and technology, and I hope to continue creating interactive art in my free time. </p>
             </p>
 
             <p style="text-align: center;"><a href = "index.html" background-color: rgb(27, 44, 71)>click here to go back to homepage</a></p>
