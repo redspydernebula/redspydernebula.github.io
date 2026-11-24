@@ -52,6 +52,22 @@ html{
   scroll-behavior: smooth;
 }
 
+canvas {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  padding: 2rem;
+}
+
 video{
   display: block;
   margin-left: auto;
@@ -59,6 +75,7 @@ video{
   max-width: 100%;
   height: auto;
 }
+
 
 #introSection{
   height: fit-content;
