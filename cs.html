@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang= "en">
+  <div id="#introSection">
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta charset = "UTF-8">
+    <title>CS</title>
+
+
+    </head>
+  <body>
+    <div id="centerSection">
+    <div class="bio" id="bioSection">
+        <header>
+        </br>
+        <h1 background-color: rgb(27, 44, 71) style="text-align:center;">Andrew Boyacigiller</h1>
+        </header>
+        
+        <body>
+
+            <h2> Portfolio Work </h2>
+            <p> Below is a collection of some portfolio work I have done over the past few years. </p>
+            <h3> 2026 </h3>
+            <h4> Simulation - Finite Element Analysis </h4>
+            <p> Below is a simulation project using a finite element solver. The goal was modeling the behaviour of a physical system under various loads and boundary conditions. This was done by representing the system as a mesh of element tetrahedra, applying forces due to gravity or elastic deformation, and solving for the resulting displacements and stresses. </p>
+
+            <p> The project was implemented in C++ and used the Eigen library for linear algebra operations. The results were visualized using OpenGL, allowing for interactive exploration of the system's response to different scenarios.</p>
+
+            <p> The video below shows a simulation of a sphere with a low coefficient of stiffness. Despite the near inversion of the tetrahedra, the system remains stable and does not collapse. The second video shows a simulation of an ellipsoid with a higher coefficient of stiffness bounding off a collider.</p>
+            <p style="text-align: center;"><video controls>
+                <source src="videos\SIMFEM\Boyacigiller_SIMFEM_Ellipsoid.mp4" type="video/mp4">
+                Your browser does not support the video tag. </video> </p>
+            
+            <p style="text-align: center;"><video controls>
+                <source src="videos\SIMFEM\Boyacigiller_SIMFEM_Sphere.mp4" type="video/mp4">
+                Your browser does not support the video tag. </video> </p>
+
+            <h4> Logical Modeling - Counterpoint </h4>
+            <p> Below is a logical modeling project focused on counterpoint composition. The goal was to create a system that could generate and evaluate musical counterpoint according to established rules and principles. This involved representing musical elements as logical propositions and using automated reasoning to explore possible combinations and their harmonic implications. Aside from a javascript visualization component, the project is implemented in Forge FM and won an award for best-in-class. </p>
+
+            <h3> 2025 </h3>
+
+            <h4> Computational Photography - Splat Morphing </h4>
+            <p> Below is a computational photography project focused on splat morphing. The goal was to create a system that could generate smooth transitions between images by representing them as splats and interpolating their positions and colors over time. This involved utilizing algorithms for splat generation, morphing, and rendering, as well as implementing a user interface for exploration of the results. The project was implemented in python, with a pipeline for processing images, to structure-from-motion, to gaussian splat generation, and finally to morphing with two different methods. The first was a simple linear interpolation, while the second utilized a more sophisticated approach based on spherical harmonics. </p>
+
+            <p> The video below shows a morphing of two images using the spherical harmonics method. The results demonstrate the effectiveness of the approach in generating smooth and visually appealing transitions between images. </p>
+
+            <h4> Computational Photography - Optical Flow</h4>
+            <p> Below is a computational photography project focused on optical flow. The goal was to create a system that could estimate the motion of pixels between consecutive frames in a video sequence. This involved implementing algorithms for optical flow estimation and integrating them into a larger image processing pipeline. The project was implemented in python, with a focus on efficiency and accuracy in motion estimation. </p>
+
+            <h2> 2024 </h2>
+
+            <h4> Computer Graphics - Ray Tracing </h4>
+            <p> Below is a computer graphics project focused on ray tracing. The goal was to create a system that could simulate the behavior of light in a 3D scene, generating realistic images by tracing the path of light rays as they interact with objects. This involved implementing algorithms for ray-scene intersection, shading, and global illumination. The project was implemented in C++, with a focus on performance and accuracy in rendering. </p>
+
+            <h4> Computer Security - StackSwap </h4>
+            <p> StackSwap is a security project designed to thward traditional JIT-ROP attacks by implementing a return address swapping mechanism. The project was implemented in C, with a focus on performance and security. The project focuses on hiding the return addresses of functions on the stack to prevent exploitation. To do this, I instrument the prologue and epilogue of each function to swap the stack pointer between an information hiding region before and after the function call. In this case, register r11 was used to move the swapped stack pointer. In testing, little to no gadgets with access to r11 were found. </p>
+
+            <h4> Computer Vision - Neural Radiance Fields </h4>
+            <p> Below is a computer vision project focused on neural radiance fields. The goal was to create a system that could represent and render 3D scenes using deep learning techniques. This involved implementing algorithms for scene representation, rendering, and optimization. The project was implemented in python, with a focus on efficiency and accuracy in scene reconstruction and rendering. </p>
+
+            <h2> 2023 </h2>
+            <h4> OMatch! - Basketball Matchmaking Service </h4>
+            <p> OMatch! is a platform dedicated to creating fun and competitive 5 v 5 basketball games at the Brown's OMAC. The service utilizes a matchmaking algorithm that takes into account player statistics, skill ratings, and availability to create balanced teams for each game. The project was implemented as a web application using HTML, CSS, and JavaScript, with a backend server written in Java handling user authentication, data storage with firebase, and matchmaking logic. </p>
+
+            <p>  The frontend interface allows users to create persistent profiles to store their information such as name, basketball position, and keep track of win-loss records, and find 5 v 5 matches with people of similar skill levels to them based on ELO rating and matchmaking algorithms on the backend. Through this, we hope that students and community members in Providence will be enabled to have optimized, fun games that they can plan out ahead of time with players that are less intimidating because of similar skill levels. </p>
+
+            <p style="text-align: center;"><a href = "https://github.com/jonathanzhou1/OMatch" style="background-color: rgb(27, 44, 71);"> Omatch Github Page </a></p>
+
+            <p style="text-align: center;"><a href = "index.html" background-color: rgb(27, 44, 71)>click here to go back to homepage</a></p>
+        </body>
+        
+        <footer>
+        
+        
+        </footer>
+    </div>
+    </div>
+    </body>
+  </body>
+  
+  
+</html>
