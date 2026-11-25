@@ -4,7 +4,7 @@
   <head>
     <link rel="stylesheet" type="text/css" href="style.css" />
     <meta charset = "UTF-8">
-    <title>CS</title>
+    <title>CS Portfolio - Andrew Boyacigiller</title>
 
 
     </head>
@@ -13,13 +13,14 @@
     <div class="bio" id="bioSection">
         <header>
         </br>
-        <h1 background-color: rgb(27, 44, 71) style="text-align:center;">Andrew Boyacigiller</h1>
+        <h1 background-color: rgb(27, 44, 71) style="text-align:center;">CS Portfolio</h1>
+        
         </header>
         
         <body>
 
             <h2> Portfolio Work </h2>
-            <p> Below is a collection of some portfolio work I have done over the past few years. </p>
+            <p> Below is a catalogue of some portfolio work I have done over the past few years. In college, I focused on skills in Computer Graphics and Computer Security. Both fields- in my opinion- are among the two most disrupted in recent years by the onset of AI, making them very interesting fields to work within. </p>
             <h3> 2026 </h3>
             <h4> Simulation - Finite Element Analysis </h4>
             <p> Below is a simulation project using a finite element solver. The goal was modeling the behaviour of a physical system under various loads and boundary conditions. This was done by representing the system as a mesh of element tetrahedra, applying forces due to gravity or elastic deformation, and solving for the resulting displacements and stresses. </p>
@@ -40,18 +41,20 @@
                 Your browser does not support the video tag. </video> </p>
 
             <h4> Graphics - Pathtracing </h4>
-            <p> For this project, I developed a monte-carlo pathtracer in C++. The implementation utilized advanced techniques such as direct and indirect illumination, and multiple importance sampling to achieve high-quality image reconstruction with reduced noise. The pathtracer can handle complex lighting scenarios with support for features like caustics, soft shadows, and tonemapping. It supports various material types and can render scenes with a large number of light sources and arbitrary geometries.</p>
+            <div style="display: flex; flex-wrap: wrap; align-items: flex-start;">
+              <div style="flex: 10 1 250px;">
+                <p> For this project, I developed a monte-carlo pathtracer in C++. The implementation utilized advanced techniques such as direct and indirect illumination, and multiple importance sampling to achieve high-quality image reconstruction with reduced noise. The pathtracer can handle complex lighting scenarios with support for features like caustics, soft shadows, and tonemapping. It supports various material types and can render scenes with a large number of light sources and arbitrary geometries.</p>
+              </div>
+              <div style="text-align: center; flex: 1 1 300px;">
+                <p> Classic Cornell Box with full diffuse lighting. </p>
+                <img src="images\PathTracing\cornell_box_full_lighting.png" alt="Morphing from one plane to the other via geometry changes" style="width: 90%; max-width: 90%; height: auto; margin: 0 auto 1.5rem auto; display: block;">
 
-            <div style="text-align: center;">
-            <p> Classic Cornell Box with full diffuse lighting. </p>
-            <img src="images\PathTracing\cornell_box_full_lighting.png" alt="Morphing from one plane to the other via geometry changes">
-
-            <p> Classic Cornell Box with full mirror lighting. </p>
-            <img src="images\PathTracing\mirror.png" alt="Morphing from one plane to the other via geometry changes">
-            
-            <p> Classic Cornell Box with refraction. </p>
-            <img src="images\PathTracing\refraction.png" alt="Morphing from one plane to the other via geometry changes">
-
+                <p> Classic Cornell Box with full mirror lighting. </p>
+                <img src="images\PathTracing\mirror.png" alt="Morphing from one plane to the other via geometry changes" style="width: 90%; max-width: 90%; height: auto; margin: 0 auto 1.5rem auto; display: block;">
+                
+                <p> Classic Cornell Box with refraction. </p>
+                <img src="images\PathTracing\refraction.png" alt="Morphing from one plane to the other via geometry changes" style="width: 90%; max-width: 90%; height: auto; margin: 0 auto 1.5rem auto; display: block;">
+              </div>
             </div>
 
             <h4> Logical Modeling - Counterpoint </h4>
@@ -67,10 +70,33 @@
             </p>
             <div style="text-align: center;"> 
             <p> Photo of Project Running</p>
-            <img src="images\CounterpointModeling\VisualOutput.png" alt="Photo of Project Running" width=90% max-width="90%" style="height: auto;" margin: auto; display: block;>
+            <img src="images\CounterpointModeling\VisualOutput.png" alt="Photo of Project Running" style="width: 90%; max-width: 90%; height: auto; margin: 0 auto 1.5rem auto; display: block;">
 
             <p> Counterpoint Generation and Conversion to MIDI </p>
-            <img src="images\CounterpointModeling\CTP_Portfolio_Generate_CTP.gif" alt="Photo of Project Running" width=90% max-width="90%" style="height: auto;" margin: auto; display: block;>
+            <img src="images\CounterpointModeling\CTP_Portfolio_Generate_CTP.gif" alt="Photo of Project Running" style="width: 90%; max-width: 90%; height: auto; margin: 0 auto 1.5rem auto; display: block;">
+            </div>
+
+            <h4> Graphics - Multiple Anisotropic Scattering in Clouds </h4>
+            <p> This is a graphics project focused on simulating multiple anisotropic scattering in clouds. The goal was to create a realistic rendering of cloud formations by accurately modeling the scattering of light within the cloud medium. This involved implementing algorithms for light transport within a volumetric medium to capture the interactions of light with cloud particles. The project was implemented in C++ and WebGPU. </p>
+
+            <p> The paper we implemented was <a href="https://dl.acm.org/doi/10.1145/1342250.1342277">"Multiple Anisotropic Scattering in Clouds"</a> by Bouthors et al. which works by precomputing the light transport within a cloud medium. This results in a 7-dimensional lookup table, which the paper breaks down into a series of 22 families of 2d lookup textures. When compared with more modern rendering approaches, the paper uses a 3D mesh enriched with 3d voxel noise, while more modern approaches utilize a voxel grid and 2d noise. </p>
+            
+            <p> My team and I ended up combining the methods outlined in this paper and its accompanying thesis with more modern cloud rendering techniques, usually using the paper's table approach for the higher orders of scattering that are more expensive to compute. My work was primarily on the implementation of the volumetric rendering algorithms we took from the Bouthors paper and digesting it into concrete parts to tackle as a team. Others focused on the more modern rendering algorithms or a classic raymarching algorithm as a control. </p>
+            
+            <div style="text-align: center;"> 
+              <p> Intermediate Output </p>
+              <img src="images\CloudScattering\IntermediateOutput.gif" alt="Component Functions used in render pass" width=90% max-width="90%" style="height: auto;" margin: auto; display: block;>
+              
+              <p> Final Output - Bouthors et al. for higher-order scattering running at 45fps. </p>
+              <img src="images\CloudScattering\FinalScatter2.gif" alt="Component Functions used in render pass" width=90% max-width="90%" style="height: auto;" margin: auto; display: block;>
+
+              <p> Final Output - Scattering done by classic raymarching algorithm running at 22fps.</p>
+              <img src="images\CloudScattering\FinalScatter1.gif" alt="Component Functions used in render pass" width=90% max-width="90%" style="height: auto;" margin: auto; display: block;>
+              
+              <p> Some component Functions used in render pass </p>
+              <img src="images\CloudScattering\ComponentFunctions.png" alt="Component Functions used in render pass" width=90% max-width="90%" style="height: auto;" margin: auto; display: block;>
+
+              <p style="text-align: center;"><a href = "https://github.com/rduoDevs/sky-high-clouds"> Project Github Page </a></p>
             </div>
 
             <h3> 2025 </h3>
@@ -82,11 +108,11 @@
             
             <div style="text-align: center;">
             <p> Morphing from one plane to the other via geometry changes </p>
-            <img src="videos\SplatMorph\morph_plane_proxy_geom.gif" alt="Morphing from one plane to the other via geometry changes">
+            <img src="videos\SplatMorph\morph_plane_proxy_geom.gif" alt="Morphing from one plane to the other via geometry changes" width=90% max-width="90%" style="height: auto;" margin: auto; display: block;>
             <p> Morphing from one plane to the other via positioning and opacity changes </p>
-            <img src="videos\SplatMorph\Plane_Splat_Morph_Opacity.gif" alt="Morphing from one plane to the other via positioning and opacity changes">
+            <img src="videos\SplatMorph\Plane_Splat_Morph_Opacity.gif" alt="Morphing from one plane to the other via positioning and opacity changes" width=90% max-width="90%" style="height: auto;" margin: auto; display: block;>
             <p> Morphing from one plane to the other via positioning and opacity changes </p>
-            <img src="videos\SplatMorph\Plane_Splat_Morph.gif" alt="Morphing from one plane to the other via positioning" >
+            <img src="videos\SplatMorph\Plane_Splat_Morph.gif" alt="Morphing from one plane to the other via positioning" width=90% max-width="90%" style="height: auto;" margin: auto; display: block;>
             </div>
             <p style="text-align: center;"><a href = "https://github.com/BrownCSCI1290/final-panangam"> Splat Morphing Github Page </a></p>
            
