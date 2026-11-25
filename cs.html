@@ -24,19 +24,54 @@
             <h4> Simulation - Finite Element Analysis </h4>
             <p> Below is a simulation project using a finite element solver. The goal was modeling the behaviour of a physical system under various loads and boundary conditions. This was done by representing the system as a mesh of element tetrahedra, applying forces due to gravity or elastic deformation, and solving for the resulting displacements and stresses. </p>
 
-            <p> The project was implemented in C++ and used the Eigen library for linear algebra operations. The results were visualized using OpenGL, allowing for interactive exploration of the system's response to different scenarios.</p>
+            <p> The project was implemented in C++ and used the Eigen library for linear algebra operations. When provided a tetrahedral mesh, the simulator converts it to a system of points and tetrahedra linking them, extracts a surface mesh, and begins running the simulation. The simulator currently supports gravity, collisions, elastic and viscous strain, viscous drag, vertex pinning, and optimizations like parallelism and RK4 integration. The results were visualized using OpenGL, allowing for interactive exploration of the system's response to different scenarios.</p>
 
-            <p> The video below shows a simulation of a sphere with a low coefficient of stiffness. Despite the near inversion of the tetrahedra, the system remains stable and does not collapse. The second video shows a simulation of an ellipsoid with a higher coefficient of stiffness bounding off a collider.</p>
-            <p style="text-align: center;"><video controls>
-                <source src="videos\SIMFEM\Boyacigiller_SIMFEM_Ellipsoid.mp4" type="video/mp4">
-                Your browser does not support the video tag. </video> </p>
+            <p> Forces are solved in parallel on a per-node or per-tet basis depending on the force applied, achieving a speedup of approximately 3.79x when benchmarked against a sequential implementation. Solving can use Runge-Kutta 4, a midpoint method (RK2), or euler integration. RK4 integration can reduce the number of steps needed to avoid instability by a factor of around 10-100 depending on mesh properties.</p>
             
+            <p>An ellipsoid with a higher coefficient of stiffness bounding off a collider.</p>
+            <p style="text-align: center;"><video controls>
+              <source src="videos\SIMFEM\Boyacigiller_SIMFEM_Ellipsoid.mp4" type="video/mp4">
+              Your browser does not support the video tag. </video> </p>
+              
+            <p> A simulation of a sphere with a low coefficient of stiffness. Despite the near inversion of the tetrahedra, the system remains stable and does not collapse. </p>
+              
             <p style="text-align: center;"><video controls>
                 <source src="videos\SIMFEM\Boyacigiller_SIMFEM_Sphere.mp4" type="video/mp4">
                 Your browser does not support the video tag. </video> </p>
 
+            <h4> Graphics - Pathtracing </h4>
+            <p> For this project, I developed a monte-carlo pathtracer in C++. The implementation utilized advanced techniques such as direct and indirect illumination, and multiple importance sampling to achieve high-quality image reconstruction with reduced noise. The pathtracer can handle complex lighting scenarios with support for features like caustics, soft shadows, and tonemapping. It supports various material types and can render scenes with a large number of light sources and arbitrary geometries.</p>
+
+            <div style="text-align: center;">
+            <p> Classic Cornell Box with full diffuse lighting. </p>
+            <img src="images\PathTracing\cornell_box_full_lighting.png" alt="Morphing from one plane to the other via geometry changes">
+
+            <p> Classic Cornell Box with full mirror lighting. </p>
+            <img src="images\PathTracing\mirror.png" alt="Morphing from one plane to the other via geometry changes">
+            
+            <p> Classic Cornell Box with refraction. </p>
+            <img src="images\PathTracing\refraction.png" alt="Morphing from one plane to the other via geometry changes">
+
+            </div>
+
             <h4> Logical Modeling - Counterpoint </h4>
-            <p> Below is a logical modeling project focused on counterpoint composition. The goal was to create a system that could generate and evaluate musical counterpoint according to established rules and principles. This involved representing musical elements as logical propositions and using automated reasoning to explore possible combinations and their harmonic implications. Aside from a javascript visualization component, the project is implemented in Forge FM and won an award for best-in-class. </p>
+            <p> This is a logical modeling project focused on counterpoint composition. The goal was to create a system that could generate and evaluate musical counterpoint according to established rules and principles. This involved representing musical elements as logical propositions and using automated reasoning to explore possible combinations and their harmonic implications. Aside from a javascript visualization component, the project is implemented in Forge FM and won an award for best-in-class. 
+            
+            The project had a couple settings one could change. The first one was biasing the counterpoint generation towards the style of a specific composer. The system we made had options for Bach, Beethoven, and Bartok. We also allowed a user to specify a specific melody and have the system generate counterpoint for that melody. The system would then output a MIDI file of the generated counterpoint, which could be played back and evaluated for musicality. We also allowed the user to convert a MIDI file into a logical representation, which could then be evaluated for adherence to the rules of counterpoint. This allowed us to analyze existing musical works and determine whether they satisfied the constraints of counterpoint composition.
+
+            The goal of the project was to answer the following two questions:
+
+            Are the rules of counterpoint enough to write good-sounding counterpoint, or is there a required human aspect to it?
+            Does counterpoint in classical repertoire actually satisfy the rules?
+            We found that the answer to both of these questions is yes. Unlike more free musical structures such as fugues, counterpoint is very strict, and for good reason. We saw this firsthand when the generated counterpoint actually started to sound good, and the pieces we passed into the MIDI parser actually satisfied the constraints.
+            </p>
+            <div style="text-align: center;"> 
+            <p> Photo of Project Running</p>
+            <img src="images\CounterpointModeling\VisualOutput.png" alt="Photo of Project Running" width=90% max-width="90%" style="height: auto;" margin: auto; display: block;>
+
+            <p> Counterpoint Generation and Conversion to MIDI </p>
+            <img src="images\CounterpointModeling\CTP_Portfolio_Generate_CTP.gif" alt="Photo of Project Running" width=90% max-width="90%" style="height: auto;" margin: auto; display: block;>
+            </div>
 
             <h3> 2025 </h3>
 
@@ -44,9 +79,16 @@
             <p> Below is a computational photography project focused on splat morphing. The goal was to create a system that could generate smooth transitions between images by representing them as splats and interpolating their positions and colors over time. This involved utilizing algorithms for splat generation, morphing, and rendering, as well as implementing a user interface for exploration of the results. The project was implemented in python, with a pipeline for processing images, to structure-from-motion, to gaussian splat generation, and finally to morphing with two different methods. The first was a simple linear interpolation, while the second utilized a more sophisticated approach based on spherical harmonics. </p>
 
             <p> The video below shows a morphing of two images using the spherical harmonics method. The results demonstrate the effectiveness of the approach in generating smooth and visually appealing transitions between images. </p>
-
-
-            <p style="text-align: center;"><a href = "https://github.com/BrownCSCI1290/final-panangam"> Omatch Github Page </a></p>
+            
+            <div style="text-align: center;">
+            <p> Morphing from one plane to the other via geometry changes </p>
+            <img src="videos\SplatMorph\morph_plane_proxy_geom.gif" alt="Morphing from one plane to the other via geometry changes">
+            <p> Morphing from one plane to the other via positioning and opacity changes </p>
+            <img src="videos\SplatMorph\Plane_Splat_Morph_Opacity.gif" alt="Morphing from one plane to the other via positioning and opacity changes">
+            <p> Morphing from one plane to the other via positioning and opacity changes </p>
+            <img src="videos\SplatMorph\Plane_Splat_Morph.gif" alt="Morphing from one plane to the other via positioning" >
+            </div>
+            <p style="text-align: center;"><a href = "https://github.com/BrownCSCI1290/final-panangam"> Splat Morphing Github Page </a></p>
            
 
             <h4> Computational Photography - Optical Flow</h4>

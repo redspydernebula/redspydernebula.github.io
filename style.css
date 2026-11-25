@@ -50,6 +50,7 @@ html{
   background-attachment: fixed;
   background-size: 100vw 100vh;
   scroll-behavior: smooth;
+  scrollbar-width: none;
 }
 
 canvas {
@@ -74,6 +75,16 @@ video{
   margin-right: auto;
   max-width: 100%;
   height: auto;
+}
+
+.image-container img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 90%;
+  height: auto;
+  margin: auto;
+  display: block;
 }
 
 
